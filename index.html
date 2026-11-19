@@ -6,12 +6,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Abril+Fatface&family=Special+Elite&family=Alfa+Slab+One&family=Bangers&family=Permanent+Marker&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
 <style>
-:root{--p:#ff4fa3;--f:#d6007f;--r:#e10600;--y:#ffe600;--g:#a6ff00;--k:#111;--w:#f1e9d6;--v:#8a4bff;--c:#62c9ff;
---grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .2 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+:root{--p:#ff4fa3;--f:#d6007f;--r:#e10600;--y:#ffe600;--g:#a6ff00;--k:#111;--w:#f3e4be;--v:#8a4bff;--c:#62c9ff;
+--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .30 0 0 0 0 .12 0 0 0 .12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+--paper:var(--grain),radial-gradient(ellipse at 18% 12%,rgba(209,167,96,.24),transparent 55%),radial-gradient(ellipse at 85% 88%,rgba(176,126,64,.24),transparent 58%),linear-gradient(180deg,#f7ecd0 0%,#f0dfb4 55%,#e7cfa0 100%)}
 *{box-sizing:border-box}
 body{margin:0;background:#2a1a24;font-family:'Special Elite',monospace;color:var(--k)}
 .leo{background:url("img/carey.jpg") center/cover no-repeat #e8a33d}
-.cover{position:relative;max-width:520px;margin:0 auto;background:var(--grain),var(--w);overflow:hidden;padding:0 14px 90px;animation:enter .9s cubic-bezier(.2,1.2,.4,1) both}
+.cover{position:relative;max-width:520px;margin:0 auto;background:var(--paper);box-shadow:0 14px 40px rgba(0,0,0,.55),inset 0 0 46px rgba(139,94,43,.24);overflow:hidden;padding:0 14px 90px;animation:enter .9s cubic-bezier(.2,1.2,.4,1) both}
 .strip{height:22px;margin:0 -14px 14px}
 .top{text-align:center;font-size:12px;letter-spacing:.5px;margin:0 0 6px}
 .sub{text-align:center;margin:6px 0 0;font-size:14px;rotate:-1deg}
@@ -50,7 +51,7 @@ body{margin:0;background:#2a1a24;font-family:'Special Elite',monospace;color:var
 #snd{position:fixed;right:12px;bottom:12px;z-index:5;background:var(--y);border:2px solid #111;font:700 13px 'Special Elite',monospace;padding:10px 12px;cursor:pointer;box-shadow:3px 3px 0 #111;rotate:-3deg}
 .ov{position:fixed;inset:0;z-index:10;background:rgba(17,17,17,.78);display:grid;place-items:center;padding:16px;overflow:auto}
 .ov[hidden]{display:none}
-.sheet{width:100%;max-width:440px;background:var(--grain),var(--w);padding:34px 24px 28px;clip-path:polygon(0 2%,8% 0,25% 1.5%,48% 0,70% 2%,100% 0,99% 30%,100% 62%,98% 100%,72% 98%,50% 100%,22% 98%,0 100%,1.5% 60%);animation:unfold .55s cubic-bezier(.2,1.2,.4,1) both;position:relative}
+.sheet{width:100%;max-width:440px;background:var(--paper);box-shadow:inset 0 0 34px rgba(139,94,43,.2);padding:34px 24px 28px;clip-path:polygon(0 2%,8% 0,25% 1.5%,48% 0,70% 2%,100% 0,99% 30%,100% 62%,98% 100%,72% 98%,50% 100%,22% 98%,0 100%,1.5% 60%);animation:unfold .55s cubic-bezier(.2,1.2,.4,1) both;position:relative}
 .sheet h2{font-size:clamp(30px,9vw,44px);margin-bottom:14px}
 .sheet label.t{display:block;margin:14px 0 4px;font-size:15px}
 .sheet input[type=text],.sheet textarea{width:100%;font:18px 'Special Elite',monospace;background:#fff8;border:0;border-bottom:3px solid var(--f);padding:10px 6px;color:#111;border-radius:0}
