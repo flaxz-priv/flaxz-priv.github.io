@@ -127,9 +127,6 @@ body{margin:0;background:#2a1a24;font-family:'Special Elite',monospace;color:var
         <label><input type="radio" name="asiste" value="si"><span>VOY, OBVIO</span></label>
         <label><input type="radio" name="asiste" value="no"><span>NO PUEDO, ME MUERO</span></label>
       </div>
-      <div id="qwrap"><label class="t" for="cant">Cantidad de personas (con vos)</label>
-        <div class="qty"><button type="button" id="mn" aria-label="Menos">−</button><output id="qv">1</output><button type="button" id="pl" aria-label="Más">+</button></div>
-        <input type="hidden" name="cantidad" id="cant" value="1"></div>
       <label class="t" for="com">Comentarios (opcional)</label>
       <textarea id="com" name="comentarios" rows="3" maxlength="300"></textarea>
       <input class="hp" type="text" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -141,9 +138,9 @@ body{margin:0;background:#2a1a24;font-family:'Special Elite',monospace;color:var
 
 <script>
 /* ===== CONFIGURACIÓN ===== */
-const APPS_SCRIPT_URL = '';            // pegá acá la URL de la implementación (termina en /exec)
-const FOTO_PRINCIPAL  = 'img/principal.jpg';           
-const FOTO_MONOPOLY   = 'img/monopoly.jpg';           
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwtR2tU2HMUEgwILom0qNEbAxwRd3Yra0NU3_60O9ii3j8lCAnrPUon0Y00jKEq2UjzVA/exec';            // pegá acá la URL de la implementación (termina en /exec)
+const FOTO_PRINCIPAL  = 'img/principal.jpg';            
+const FOTO_MONOPOLY   = 'img/monopoly.jpg';          
 const FOTOCOPIA       = false;          // true = blanco y negro con trama; false = foto a color
 const LIMITE = new Date('2026-12-02T03:00:00Z'); // 1/12 23:59 hora Argentina
 /* ========================= */
@@ -184,10 +181,6 @@ function closeF(){ov.hidden=true;document.body.style.overflow='';open_.focus()}
 open_.onclick=openF;$('close').onclick=closeF;
 ov.addEventListener('click',e=>{if(e.target===ov)closeF()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!ov.hidden)closeF()});
-
-let q=1;const setQ=n=>{q=Math.min(10,Math.max(1,n));$('qv').textContent=q;$('cant').value=q};
-$('mn').onclick=()=>setQ(q-1);$('pl').onclick=()=>setQ(q+1);
-f.addEventListener('change',()=>{$('qwrap').style.display=f.asiste.value==='no'?'none':''});
 
 f.addEventListener('submit',async e=>{e.preventDefault();const go=$('go');
  if(!$('nombre').value.trim()||!f.asiste.value){msg.textContent='Completá tu nombre y si venís, reina.';return}
