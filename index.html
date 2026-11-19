@@ -114,7 +114,7 @@ body{margin:0;background:#2a1a24;font-family:'Special Elite',monospace;color:var
 <div class="bar"><div class="leo"></div><div class="code" aria-hidden="true"></div></div>
 </main>
 
-<button id="snd" aria-pressed="false">SONIDO: OFF</button>
+<button id="snd" aria-pressed="true">SONIDO: ON</button>
 
 <div class="ov" id="ov" hidden>
   <form class="sheet" id="f" novalidate role="dialog" aria-modal="true" aria-labelledby="ft">
@@ -164,7 +164,10 @@ function foto(id,src,label){const e=document.getElementById(id);
 foto('foto1',FOTO_PRINCIPAL,'TU FOTO ACÁ (portada)');
 foto('foto2',FOTO_MONOPOLY,'FOTO DE FONDO PARA EL MONOPOLY');
 
-let ac,on=false;const au=()=>ac||(ac=new(window.AudioContext||window.webkitAudioContext)());
+let ac,on=true,started=false;const au=()=>ac||(ac=new(window.AudioContext||window.webkitAudioContext)());
+const bgm=new Audio('audio/crank.mp3');bgm.loop=true;bgm.volume=0.65;bgm.preload='auto';
+const startBgm=()=>{if(!on)return;if(!started){const seek=()=>{if(!started){bgm.currentTime=71;started=true}};if(bgm.readyState>=1)seek();else bgm.addEventListener('loadedmetadata',seek,{once:true})}bgm.play().then(()=>{document.removeEventListener('pointerdown',unlock);document.removeEventListener('keydown',unlock)}).catch(()=>{})};
+const unlock=e=>{if(e.target===snd)return;if(on&&bgm.paused){au().resume();startBgm()}};
 function rip(){if(!on)return;const c=au(),n=c.createBufferSource(),b=c.createBuffer(1,c.sampleRate*.25,c.sampleRate),d=b.getChannelData(0);
  for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*(1-i/d.length);n.buffer=b;const f=c.createBiquadFilter();f.type='highpass';f.frequency.value=1800;
  const g=c.createGain();g.gain.value=.25;n.connect(f).connect(g).connect(c.destination);n.start()}
@@ -172,7 +175,8 @@ function chime(){if(!on)return;const c=au();[880,1175,1568].forEach((fr,i)=>{con
  o.type='triangle';o.frequency.value=fr;g.gain.setValueAtTime(.001,t);g.gain.exponentialRampToValueAtTime(.2,t+.02);g.gain.exponentialRampToValueAtTime(.001,t+.5);
  o.connect(g).connect(c.destination);o.start(t);o.stop(t+.6)})}
 const snd=document.getElementById('snd');
-snd.onclick=()=>{on=!on;snd.textContent='SONIDO: '+(on?'ON':'OFF');snd.setAttribute('aria-pressed',on);if(on){au().resume();chime()}};
+snd.onclick=()=>{on=!on;snd.textContent='SONIDO: '+(on?'ON':'OFF');snd.setAttribute('aria-pressed',on);if(on){au().resume();startBgm();chime()}else bgm.pause()};
+document.addEventListener('pointerdown',unlock);document.addEventListener('keydown',unlock);startBgm();
 
 const $=id=>document.getElementById(id),ov=$('ov'),f=$('f'),msg=$('msg'),open_=$('open');
 const closed=new Date()>LIMITE;
