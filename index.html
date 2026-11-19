@@ -1,257 +1,206 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Campamento Facu 2000 · Summer Edition</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Barlow+Condensed:wght@500;600;700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#d6007f">
+<title>MEGA TRANSA · Edición 2026 Amor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Abril+Fatface&family=Special+Elite&family=Alfa+Slab+One&family=Bangers&family=Permanent+Marker&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --forest:#23401f; --olive:#6c6b2b; --lime:#b7c06b; --butter:#f2d774; --mustard:#d49a1c;
-  --choc:#35200f; --earth:#8b5b33; --cream:#efe4c4; --paper:#f9f4e2;
-  --display:'Bowlby One','Arial Black',Impact,sans-serif;
-  --cond:'Barlow Condensed','Arial Narrow',sans-serif;
-  --hand:'Reenie Beanie','Segoe Print',cursive;
-  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--choc);color:var(--choc);font:500 19px/1.3 var(--cond);-webkit-text-size-adjust:100%}
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.16;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .12 0 0 0 0 .05 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
-.mag{max-width:560px;margin:0 auto;background:var(--paper);overflow:hidden}
-section{position:relative;padding:44px 22px 64px}
-h2,h1{margin:0;font-family:var(--display);font-weight:400;line-height:.92;letter-spacing:-.01em}
-p{margin:0 0 .7em}
-.hand{font-family:var(--hand);font-size:30px;line-height:.9}
-.folio{position:absolute;bottom:14px;font-size:15px;font-weight:700;letter-spacing:.08em;opacity:.75}
-.folio.l{left:22px}.folio.r{right:22px}
-.tape{position:absolute;width:84px;height:26px;background:rgba(242,215,116,.78);transform:rotate(-6deg);box-shadow:0 0 0 1px rgba(53,32,15,.08)}
-.ht{position:absolute;pointer-events:none;background-image:radial-gradient(circle,var(--choc) 1.5px,transparent 2px);background-size:7px 7px;
-  -webkit-mask-image:linear-gradient(to bottom,#000,transparent);mask-image:linear-gradient(to bottom,#000,transparent)}
-.stamp{opacity:0;transform:scale(1.7) rotate(0deg);transition:opacity .25s,transform .35s cubic-bezier(.3,1.6,.5,1)}
-.stamp.on{opacity:1;transform:scale(1) rotate(var(--r,-8deg))}
-
-/* PORTADA */
-.cover{background:var(--butter);padding:18px 18px 40px;min-height:100svh;display:flex;flex-direction:column}
-.strip{display:flex;justify-content:space-between;gap:6px;font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase;border-top:3px solid var(--choc);border-bottom:1px solid var(--choc);padding:5px 0}
-.mast{position:relative;margin-top:22px}
-.mast h1{font-size:clamp(38px,12.4vw,70px);color:var(--choc);text-shadow:3px 2px 0 var(--mustard);transform:rotate(-2.5deg);transform-origin:left}
-.mast .facu{display:inline-block;margin:6px 0 0 4px;padding:4px 14px 8px;background:var(--forest);color:var(--paper);font-size:clamp(70px,25vw,150px);transform:rotate(1.8deg);text-shadow:4px 3px 0 var(--olive)}
-.mast .yr{display:inline-block;font-family:var(--display);font-size:clamp(46px,17vw,100px);color:transparent;-webkit-text-stroke:2.5px var(--choc);transform:rotate(-4deg) translate(6px,-10px);letter-spacing:.02em}
-.art{position:relative;margin:10px -4px 0;height:min(56vw,300px);flex:none}
-.art svg{position:absolute;inset:0;width:100%;height:100%;clip-path:polygon(1% 4%,30% 0,62% 3%,99% 1%,100% 40%,98% 96%,64% 100%,30% 97%,0 99%,2% 50%)}
-.lines{position:relative;margin-top:14px;display:grid;gap:10px}
-.line{background:var(--choc);color:var(--butter);padding:8px 12px;font-size:25px;font-weight:700;line-height:1;text-transform:uppercase;width:fit-content;max-width:88%;transform:rotate(-1.4deg)}
-.line.b{background:var(--paper);color:var(--choc);border:2px solid var(--choc);margin-left:8%;transform:rotate(1.2deg)}
-.seal{position:absolute;right:6px;top:-58px;width:104px;height:104px;border-radius:50%;background:var(--forest);color:var(--butter);display:grid;place-items:center;text-align:center;font:700 19px/1 var(--cond);text-transform:uppercase;border:3px dashed var(--butter);outline:3px solid var(--forest);z-index:2}
-.note{position:absolute;right:16px;bottom:10px;color:var(--forest);transform:rotate(-6deg);text-align:center}
-.btn{display:inline-block;font:700 24px/1 var(--cond);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;color:var(--paper);background:var(--forest);padding:14px 22px;border:3px solid var(--choc);box-shadow:5px 5px 0 var(--choc);cursor:pointer;transition:transform .12s,box-shadow .12s}
-.btn:hover,.btn:focus-visible{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--choc)}
-.cover .btn{margin-top:22px;align-self:flex-start}
-:focus-visible{outline:3px solid var(--mustard);outline-offset:3px}
-
-/* CAMPAMENTO */
-.camp{background:var(--paper)}
-.camp h2{font-size:clamp(40px,13vw,72px);color:var(--forest);transform:rotate(-1.5deg)}
-.cols{columns:2;column-gap:18px;margin-top:22px;font-size:19px}
-.cols p:first-child::first-letter{font:400 3.1em/.8 var(--display);float:left;margin:4px 6px 0 0;color:var(--earth)}
-.cut{margin:26px -8px 0;background:var(--lime);border:3px solid var(--choc);padding:16px 18px 18px;transform:rotate(1.4deg);position:relative;clip-path:polygon(0 3%,50% 0,100% 2%,99% 100%,48% 97%,1% 100%)}
-.cut b{font:400 26px/1 var(--display);display:block;margin-bottom:6px}
-.cut .hand{position:absolute;right:14px;bottom:-4px;color:var(--forest)}
-
-/* INFO */
-.info{background:var(--forest);color:var(--paper)}
-.info h2{font-size:clamp(40px,13vw,68px);color:var(--butter)}
-.ficha{position:relative;margin-top:30px;background:var(--cream);color:var(--choc);padding:24px 18px 20px;border:3px solid var(--choc);box-shadow:7px 7px 0 var(--mustard);transform:rotate(-1deg)}
-.ficha dl{margin:0;display:grid;gap:0}
-.ficha .row{display:grid;grid-template-columns:92px 1fr;align-items:baseline;gap:10px;padding:12px 0;border-bottom:2px dashed var(--earth)}
-.ficha .row:last-child{border:0}
-.ficha dt{font:700 17px var(--cond);letter-spacing:.1em;text-transform:uppercase;color:var(--earth)}
-.ficha dd{margin:0;font:400 28px/1 var(--display);word-break:break-word}
-.ficha .tape{top:-14px;left:30px}
-.ficha .hand{position:absolute;right:12px;top:-34px;color:var(--butter);transform:rotate(5deg)}
-
-/* DRESS CODE */
-.dress{background:var(--olive);color:var(--paper)}
-.dress .ht{right:0;top:0;width:55%;height:190px;opacity:.35;background-image:radial-gradient(circle,var(--forest) 1.6px,transparent 2.1px)}
-.dress h2{position:relative;font-size:clamp(40px,13vw,68px);color:var(--paper);text-shadow:3px 3px 0 var(--choc)}
-.dress h2 span{display:block;color:var(--butter);transform:translateX(18px) rotate(-2deg);margin-top:4px}
-.tags{position:relative;display:flex;flex-wrap:wrap;gap:12px 10px;margin:26px 0 0}
-.tag{font:700 24px/1 var(--cond);text-transform:uppercase;padding:9px 14px 9px 12px;background:var(--paper);color:var(--choc);border:2px solid var(--choc);clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%)}
-.tag:nth-child(2n){background:var(--butter);transform:rotate(1.6deg)}
-.tag:nth-child(3n){background:var(--lime);transform:rotate(-1.8deg)}
-.no{position:relative;margin-top:26px;border-top:3px solid var(--butter);padding-top:12px;font-size:21px}
-.no .hand{color:var(--butter);margin-right:6px}
-
-/* ACTIVIDADES */
-.acts{background:var(--cream)}
-.acts h2{font-size:clamp(40px,13vw,68px);color:var(--choc)}
-.ev{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin-top:26px;padding-top:14px;border-top:4px solid var(--choc)}
-.ev:nth-of-type(2){margin-left:14px}
-.ev:nth-of-type(3){margin-right:10px}
-.ev .k{grid-row:span 2;font:400 64px/.85 var(--display);color:var(--mustard);-webkit-text-stroke:2px var(--choc)}
-.ev h3{margin:0;font:700 29px/1 var(--cond);text-transform:uppercase}
-.ev p{margin:0}
-.ev .lab{position:absolute;top:-16px;right:0;background:var(--forest);color:var(--butter);font:700 15px var(--cond);letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;transform:rotate(3deg)}
-
-/* RSVP */
-.rsvp{background:var(--choc);color:var(--paper);padding-bottom:84px}
-.rsvp h2{font-size:clamp(44px,15vw,84px);color:var(--butter);transform:rotate(-2deg)}
-.card{position:relative;margin-top:28px;background:var(--butter);color:var(--choc);padding:26px 18px 22px;transform:rotate(.8deg);clip-path:polygon(0 2%,100% 0,99% 98%,50% 100%,0 99%)}
-.card label,.card legend{display:block;font:700 18px var(--cond);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;padding:0}
-.card input[type=text]{width:100%;font:500 24px var(--cond);padding:10px 12px;background:var(--paper);border:3px solid var(--choc);border-radius:0;color:var(--choc)}
-fieldset{border:0;margin:18px 0 0;padding:0}
-.opts{display:flex;gap:10px}
-.opts label{flex:1;margin:0;cursor:pointer}
-.opts input{position:absolute;opacity:0}
-.opts span{display:block;text-align:center;font:700 23px/1 var(--cond);letter-spacing:.03em;padding:13px 6px;border:3px solid var(--choc);background:var(--paper);text-transform:none}
-.opts input:checked+span{background:var(--forest);color:var(--butter);transform:rotate(-1.5deg)}
-.opts input:focus-visible+span{outline:3px solid var(--mustard);outline-offset:3px}
-.card .btn{width:100%;margin-top:22px;background:var(--choc);color:var(--butter);border-color:var(--choc);box-shadow:5px 5px 0 var(--forest)}
-.msg{min-height:1.3em;margin:14px 0 0;font-weight:700}
-.end{text-align:center;margin-top:30px;color:var(--lime)}
-.end b{display:block;font:400 22px var(--display);color:var(--paper);margin-bottom:2px}
-
-@media (min-width:560px){body{font-size:21px}.cols{font-size:20px}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.stamp{opacity:1;transform:rotate(var(--r,-8deg))}}
-@keyframes drop{from{opacity:0;transform:translateY(-26px) rotate(-7deg)}}
-@keyframes slap{from{opacity:0;transform:scale(1.8) rotate(10deg)}}
-.mast h1{animation:drop .5s .05s both cubic-bezier(.3,1.4,.5,1)}
-.mast .facu{animation:drop .5s .3s both cubic-bezier(.3,1.4,.5,1)}
-.mast .yr{animation:drop .5s .55s both cubic-bezier(.3,1.4,.5,1)}
-.seal{animation:slap .4s .95s both cubic-bezier(.3,1.5,.5,1);transform:rotate(9deg)}
-.line{animation:slap .35s both}.line:nth-child(1){animation-delay:1.15s}.line.b{animation-delay:1.3s}
-</style>
-</head>
+:root{--p:#ff4fa3;--f:#d6007f;--r:#e10600;--y:#ffe600;--g:#a6ff00;--k:#111;--w:#f1e9d6;--v:#8a4bff;--c:#62c9ff;
+--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .2 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+*{box-sizing:border-box}
+body{margin:0;background:#2a1a24;font-family:'Special Elite',monospace;color:var(--k)}
+.leo{background:radial-gradient(circle at 30% 35%,transparent 0 5px,#2b1608 6px 8px,transparent 9px) 0 0/36px 32px,radial-gradient(circle at 70% 75%,transparent 0 4px,#2b1608 5px 7px,transparent 8px) 0 0/36px 32px,radial-gradient(circle at 80% 20%,#2b1608 0 3px,transparent 4px) 0 0/36px 32px,#e8a33d}
+.cover{position:relative;max-width:520px;margin:0 auto;background:var(--grain),var(--w);overflow:hidden;padding:0 14px 90px;animation:enter .9s cubic-bezier(.2,1.2,.4,1) both}
+.strip{height:22px;margin:0 -14px 14px}
+.top{text-align:center;font-size:12px;letter-spacing:.5px;margin:0 0 6px}
+.sub{text-align:center;margin:6px 0 0;font-size:14px;rotate:-1deg}
+.rz{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;line-height:.95;margin:0;font-weight:400}
+.w{display:inline-flex;margin:0 .14em;white-space:nowrap}
+.l{display:inline-block;animation:drop .6s cubic-bezier(.3,1.6,.5,1) both;animation-delay:calc(var(--i)*35ms + .35s)}
+.tile{filter:drop-shadow(2px 3px 0 rgba(0,0,0,.45))}
+.tile .l{padding:.04em .12em}
+.fl .l{-webkit-text-stroke:.16em #fff;paint-order:stroke fill;text-shadow:.07em .09em 0 rgba(0,0,0,.85)}
+.mast{font-size:clamp(30px,9.5vw,52px)}
+.big{font-size:clamp(46px,15vw,82px);margin:18px 0 6px;rotate:-3deg}
+.mid{position:relative;height:clamp(380px,112vw,540px);margin-top:6px}
+.photo{position:absolute;right:0;top:0;width:68%;height:88%;background:#ccc center/cover;clip-path:polygon(2% 1%,40% 0,100% 2%,98% 40%,100% 99%,60% 100%,3% 98%,0 50%);rotate:2deg}
+.fx{filter:grayscale(1) contrast(1.35)}
+.fx::after{content:'';position:absolute;inset:0;background:radial-gradient(#0007 1px,transparent 1.6px) 0 0/5px 5px;mix-blend-mode:multiply}
+.ph{background:repeating-linear-gradient(45deg,#bbb 0 12px,#ddd 12px 24px);filter:none}
+.ph::before{content:attr(data-l);position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:10px;font:20px 'Permanent Marker',cursive;color:var(--f)}
+.a{position:absolute;left:-1%;top:3%;width:50%;font-size:clamp(28px,8.4vw,44px);rotate:-6deg}
+.b{position:absolute;left:0;bottom:2%;width:64%;font-size:clamp(17px,5.3vw,27px);rotate:2deg}
+.st{position:absolute;animation:wig 3s ease-in-out infinite alternate;filter:drop-shadow(2px 3px 0 rgba(0,0,0,.5))}
+.seal{position:absolute;right:2%;top:2%;width:86px;height:86px;border-radius:50%;background:var(--r);border:3px dashed #fff;color:#fff;display:grid;place-items:center;text-align:center;font:17px/1 'Anton',Impact,sans-serif;rotate:12deg;animation:wig 4s ease-in-out infinite alternate-reverse;box-shadow:3px 4px 0 #000}
+.seal b{color:var(--y);font-weight:400}
+.mono{position:relative;height:clamp(230px,64vw,330px);margin:8px -6px 0}
+.mono .photo{inset:0;width:100%;height:100%;rotate:-1.5deg}
+.m{position:absolute;inset:0;padding:0 10px;font-size:clamp(34px,11vw,58px);rotate:-4deg;align-content:center}
+.ficha{list-style:none;margin:26px -4px 0;padding:26px 20px;background:var(--k);color:#fff;font-size:15px;line-height:1.5;clip-path:polygon(0 4%,12% 0,30% 3%,52% 0,75% 3%,100% 0,98% 50%,100% 97%,70% 100%,45% 96%,20% 100%,0 96%,2% 50%);rotate:-.7deg}
+.ficha li{margin:5px 0}.ficha b{color:var(--p);margin-right:8px;font-weight:400}.ficha small{color:var(--y)}.ficha .v{color:var(--g)}
+.d{font-size:clamp(24px,7.4vw,38px);margin:28px 0 10px;rotate:2deg}
+.ctaw{display:flex;justify-content:center;filter:drop-shadow(4px 5px 0 #111);margin:14px 0}
+.cta{border:0;cursor:pointer;background:var(--f);color:#fff;font:clamp(30px,9.5vw,46px) 'Anton',Impact,sans-serif;-webkit-text-stroke:2px #111;paint-order:stroke fill;padding:30px 40px;clip-path:polygon(0 12%,10% 0,28% 8%,50% 0,72% 7%,92% 0,100% 14%,97% 50%,100% 88%,80% 100%,55% 93%,30% 100%,8% 92%,2% 55%);rotate:-2deg;animation:pulse 1.6s ease-in-out infinite;min-height:64px}
+.cta:disabled{background:#777;animation:none;cursor:not-allowed}
+.cta:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:4px solid var(--c);outline-offset:3px}
+.bar{display:flex;justify-content:space-between;align-items:flex-end;margin-top:24px}
+.bar .leo{flex:1;height:34px;margin-right:16px;border:2px solid #111}
+.code{width:74px;height:34px;background:repeating-linear-gradient(90deg,#111 0 2px,transparent 2px 4px,#111 4px 5px,transparent 5px 8px,#111 8px 11px,transparent 11px 13px)}
+#snd{position:fixed;right:12px;bottom:12px;z-index:5;background:var(--y);border:2px solid #111;font:700 13px 'Special Elite',monospace;padding:10px 12px;cursor:pointer;box-shadow:3px 3px 0 #111;rotate:-3deg}
+.ov{position:fixed;inset:0;z-index:10;background:rgba(17,17,17,.78);display:grid;place-items:center;padding:16px;overflow:auto}
+.ov[hidden]{display:none}
+.sheet{width:100%;max-width:440px;background:var(--grain),var(--w);padding:34px 24px 28px;clip-path:polygon(0 2%,8% 0,25% 1.5%,48% 0,70% 2%,100% 0,99% 30%,100% 62%,98% 100%,72% 98%,50% 100%,22% 98%,0 100%,1.5% 60%);animation:unfold .55s cubic-bezier(.2,1.2,.4,1) both;position:relative}
+.sheet h2{font-size:clamp(30px,9vw,44px);margin-bottom:14px}
+.sheet label.t{display:block;margin:14px 0 4px;font-size:15px}
+.sheet input[type=text],.sheet textarea{width:100%;font:18px 'Special Elite',monospace;background:#fff8;border:0;border-bottom:3px solid var(--f);padding:10px 6px;color:#111;border-radius:0}
+.opts{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.opts label{flex:1 1 140px}.opts input{position:absolute;opacity:0}
+.opts span{display:block;text-align:center;padding:14px 8px;background:#fff;border:3px solid #111;font:19px 'Anton',Impact,sans-serif;cursor:pointer;rotate:-1.5deg}
+.opts label:nth-child(2) span{rotate:1.5deg}
+.opts input:checked+span{background:var(--y);box-shadow:4px 4px 0 var(--f)}
+.opts input:focus-visible+span{outline:4px solid var(--c)}
+.qty{display:flex;align-items:center;gap:12px}.qty button{width:48px;height:48px;font:26px 'Anton',Impact;background:var(--g);border:3px solid #111;cursor:pointer}
+.qty output{min-width:40px;text-align:center;font:30px 'Anton',Impact}
+.hp{position:absolute;left:-9999px}
+.send{width:100%;margin-top:22px;background:var(--f);color:#fff;border:3px solid #111;font:28px 'Anton',Impact;padding:14px;cursor:pointer;box-shadow:4px 5px 0 #111;rotate:-1deg}
+.send:disabled{opacity:.6}
+.x{position:absolute;right:16px;top:12px;background:none;border:0;font:700 15px 'Special Elite';cursor:pointer;text-decoration:underline;padding:8px}
+.msg{min-height:22px;margin:10px 0 0;font-size:15px;color:var(--r)}
+.ok{text-align:center;padding:10px 0}.stamp{display:inline-block;font:clamp(36px,12vw,56px) 'Anton',Impact;color:var(--r);border:6px solid var(--r);padding:6px 16px;rotate:-8deg;animation:stamp .5s cubic-bezier(.2,2,.4,1) both;margin:18px 0}
+@keyframes enter{from{opacity:0;transform:translateY(50px) rotate(2deg)}}
+@keyframes drop{from{opacity:0;transform:translateY(-44px) scale(1.5)}}
+@keyframes wig{from{transform:rotate(-5deg)}to{transform:rotate(6deg) translateY(-4px)}}
+@keyframes pulse{50%{transform:scale(1.05)}}
+@keyframes unfold{from{opacity:0;transform:translateY(80px) rotate(7deg) scale(.88)}}
+@keyframes stamp{from{opacity:0;transform:scale(2.6) rotate(-20deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style></head>
 <body>
-<main class="mag">
+<main class="cover">
+<div class="strip leo"></div>
+<p class="top">Nº 26 · DICIEMBRE 2026 · $15.000 · TIRADA GALÁCTICA</p>
+<h1 class="rz tile mast" data-r="MEGA TRANSA"></h1>
+<p class="sub">La revista de los juegos y las divas</p>
+<h2 class="rz fl big" data-r="¡EL EVENTO DEL AÑO!"></h2>
 
-<!-- 1 · PORTADA -->
-<section class="cover" id="portada">
-  <div class="strip"><span>Issue 01</span><span>Summer Edition</span><span>Est. 2000</span></div>
-  <div class="mast">
-    <h1>Campamento</h1>
-    <span class="facu h1">Facu</span><br>
-    <span class="yr">2000</span>
-  </div>
-  <div class="art" aria-hidden="true">
-    <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">
-      <defs><pattern id="d" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.7" fill="#d49a1c"/></pattern></defs>
-      <rect width="320" height="180" fill="#b7c06b"/>
-      <circle cx="238" cy="52" r="34" fill="#f9f4e2"/><circle cx="238" cy="52" r="34" fill="url(#d)"/>
-      <path d="M0 120 Q70 70 140 112 T320 96 V180 H0Z" fill="#6c6b2b"/>
-      <path d="M0 150 Q90 112 180 146 T320 136 V180 H0Z" fill="#23401f"/>
-      <g fill="#23401f" stroke="#35200f" stroke-width="2"><path d="M28 132l16-44 16 44z"/><path d="M50 138l12-34 12 34z"/><path d="M270 130l14-40 14 40z"/></g>
-      <path d="M96 150l46-78 46 78z" fill="#efe4c4" stroke="#35200f" stroke-width="3"/>
-      <path d="M142 72l-22 78h22z" fill="#d49a1c" opacity=".55"/>
-      <path d="M130 150l12-34 12 34z" fill="#35200f"/>
-      <path d="M142 72V56l16 6-16 4" fill="#d49a1c" stroke="#35200f" stroke-width="2"/>
-      <path d="M0 162h320" stroke="#35200f" stroke-width="3"/>
-    </svg>
-    <div class="ht" style="left:0;bottom:0;width:100%;height:40%;opacity:.25;-webkit-mask-image:linear-gradient(to top,#000,transparent);mask-image:linear-gradient(to top,#000,transparent)"></div>
-    <div class="note hand">¡no faltes!<br>↓</div>
-  </div>
-  <div class="lines">
-    <div class="seal">Verano<br>2000<br>todo el día</div>
-    <div class="line">Facu cumple 25</div>
-    <div class="line b">06/12 · QUINTA</div>
-  </div>
-  <a class="btn" href="#rsvp">Confirmá tu lugar</a>
+<section class="mid">
+  <div class="photo fx" id="foto1"></div>
+  <h2 class="rz fl a" data-r="¡SE REÚNEN LAS TRANS!"></h2>
+  <h3 class="rz fl b" data-r="6 DE DICIEMBRE: PREPARATE PARA EL TRANSATLÁNTICO."></h3>
+  <div class="seal" aria-label="Edición 2026 Amor"><span>EDICIÓN<br><b>2026</b><br>AMOR</span></div>
+  <svg class="st" style="left:44%;top:-3%" width="64" height="64" viewBox="-32 -32 64 64" aria-hidden="true"><polygon points="0,-30 8,-10 30,-9 12,5 18,28 0,15 -18,28 -12,5 -30,-9 -8,-10" fill="#a6ff00" stroke="#111" stroke-width="3"/></svg>
+  <svg class="st" style="right:4%;bottom:14%;animation-delay:-1s" width="80" height="56" viewBox="0 0 60 50" aria-hidden="true"><path d="M3 25Q20 2 30 17Q40 2 57 25Q30 52 3 25Z" fill="#e10600" stroke="#111" stroke-width="2.5"/><path d="M3 25Q30 33 57 25" stroke="#111" stroke-width="2.5" fill="none"/></svg>
+  <svg class="st" style="left:38%;bottom:-2%;animation-delay:-2s" width="58" height="54" viewBox="-10 -6 20 16" aria-hidden="true"><path d="M0 0C-3-5-9-1 0 7C9-1 3-5 0 0Z" fill="#ff4fa3" stroke="#111" stroke-width=".8"/></svg>
 </section>
 
-<!-- 2 · EL CAMPAMENTO -->
-<section class="camp" id="campamento">
-  <div class="tape" style="top:10px;right:26px;transform:rotate(7deg)"></div>
-  <h2>Bienvenidos al campamento</h2>
-  <div class="cols">
-    <p>Este verano el cumpleaños se arma como en los viejos campamentos: carpas, juegos, equipos y una tarde que nadie quiere que termine.</p>
-    <p>Traé ganas, una buena gorra y el mejor humor. Lo demás lo ponemos nosotros.</p>
-  </div>
-  <div class="cut">
-    <b>En esta edición</b>
-    La info del evento, qué ponerse, los desafíos del campamento y cómo confirmar.
-    <span class="hand">pág. 3 a 6</span>
-  </div>
-  <span class="folio l">Campamento Facu 2000 · 2</span>
+<section class="mono">
+  <div class="photo fx" id="foto2"></div>
+  <h2 class="rz fl m" data-r="10 HORAS DE PURO MONOPOLY"></h2>
 </section>
 
-<!-- 3 · INFORMACIÓN -->
-<section class="info" id="info">
-  <h2>Ficha del campamento</h2>
-  <div class="ficha">
-    <div class="tape"></div>
-    <span class="hand">anotalo en la agenda</span>
-    <dl>
-      <div class="row"><dt>Quién</dt><dd>Facu</dd></div>
-      <div class="row"><dt>Cumple</dt><dd>25</dd></div>
-      <div class="row"><dt>Día</dt><dd>06/12</dd></div>
-      <div class="row"><dt>Hora</dt><dd>10:00 hs a 20:00 hs</dd></div>
-      <div class="row"><dt>Dónde</dt><dd>QUINTA</dd></div>
-    </dl>
-  </div>
-  <span class="folio r">3</span>
-</section>
+<ul class="ficha">
+  <li><b>FECHA</b>6 de diciembre de 2026</li>
+  <li><b>HORARIO</b>10:00 a 19:00 hs</li>
+  <li><b>LUGAR</b>Club de Campo del Sol</li>
+  <li><b>TARJETA</b><span class="v">$15.000 por persona</span> <small>(precio provisorio, sujeto a cambios)</small></li>
+  <li><b>INCLUYE</b>Comida y bebida durante toda la jornada</li>
+  <li><b>CONFIRMACIÓN</b>Hasta el 1 de diciembre</li>
+</ul>
 
-<!-- 4 · DRESS CODE -->
-<section class="dress" id="dresscode">
-  <div class="ht"></div>
-  <h2>Dress code<span>modo campamento</span></h2>
-  <p style="position:relative;margin-top:22px;max-width:30ch">Ropa cómoda, de las que se pueden ensuciar. Vale inspirarse en los 2000.</p>
-  <div class="tags">
-    <span class="tag">Verdes y tierra</span><span class="tag">Gorra</span><span class="tag">Cargo</span><span class="tag">Zapatillas o botas</span><span class="tag">Remera de banda</span><span class="tag">Campera liviana</span>
-  </div>
-  <div class="no"><span class="hand">mejor evitar:</span> el rosa. Este campamento es verde, amarillo y marrón.</div>
-  <span class="folio l">4</span>
-</section>
-
-<!-- 5 · ACTIVIDADES (textos de ejemplo: editar a gusto) -->
-<section class="acts" id="actividades">
-  <h2>En el programa</h2>
-  <div class="ev"><span class="lab">Desafío</span><span class="k">A</span><h3>Búsqueda del tesoro</h3><p>Pistas, mapa y un premio escondido.</p></div>
-  <div class="ev"><span class="lab">Juego</span><span class="k">B</span><h3>Olimpíadas del campamento</h3><p>Equipos, pruebas absurdas y puntos.</p></div>
-  <div class="ev"><span class="lab">Fogón</span><span class="k">C</span><h3>Malvaviscos y música</h3><p>Para cerrar el día como corresponde.</p></div>
-  <span class="folio r">5</span>
-</section>
-
-<!-- 6 · RSVP -->
-<section class="rsvp" id="rsvp">
-  <h2>¿Venís?</h2>
-  <form class="card" id="f" novalidate>
-    <label for="n">Tu nombre</label>
-    <input type="text" id="n" name="n" autocomplete="name" required>
-    <fieldset><legend>Confirmás asistencia</legend>
-      <div class="opts">
-        <label><input type="radio" name="r" value="Sí, voy" checked><span>Sí, voy</span></label>
-        <label><input type="radio" name="r" value="No puedo ir"><span>No puedo</span></label>
-      </div>
-    </fieldset>
-    <button class="btn" type="submit">Enviar respuesta</button>
-    <p class="msg" id="m" role="status" aria-live="polite"></p>
-  </form>
-  <div class="end"><b>Campamento Facu 2000</b>Issue 01 · Summer Edition · nos vemos en el campamento</div>
-  <span class="folio r" style="color:var(--lime)">6</span>
-</section>
-
+<h3 class="rz fl d" data-r="ÚLTIMO DÍA PARA CONFIRMAR: 1 DE DICIEMBRE"></h3>
+<div class="ctaw"><button class="cta" id="open">CONFIRMÁ, REINA</button></div>
+<div class="bar"><div class="leo"></div><div class="code" aria-hidden="true"></div></div>
 </main>
+
+<button id="snd" aria-pressed="false">SONIDO: OFF</button>
+
+<div class="ov" id="ov" hidden>
+  <form class="sheet" id="f" novalidate role="dialog" aria-modal="true" aria-labelledby="ft">
+    <button type="button" class="x" id="close">cerrar</button>
+    <h2 class="rz fl" id="ft" data-r="CONFIRMÁ, REINA"></h2>
+    <div id="body">
+      <label class="t" for="nombre">Nombre y apellido</label>
+      <input type="text" id="nombre" name="nombre" maxlength="80" autocomplete="name" required>
+      <label class="t" id="la">¿Venís?</label>
+      <div class="opts" role="radiogroup" aria-labelledby="la">
+        <label><input type="radio" name="asiste" value="si"><span>VOY, OBVIO</span></label>
+        <label><input type="radio" name="asiste" value="no"><span>NO PUEDO, ME MUERO</span></label>
+      </div>
+      <div id="qwrap"><label class="t" for="cant">Cantidad de personas (con vos)</label>
+        <div class="qty"><button type="button" id="mn" aria-label="Menos">−</button><output id="qv">1</output><button type="button" id="pl" aria-label="Más">+</button></div>
+        <input type="hidden" name="cantidad" id="cant" value="1"></div>
+      <label class="t" for="com">Comentarios (opcional)</label>
+      <textarea id="com" name="comentarios" rows="3" maxlength="300"></textarea>
+      <input class="hp" type="text" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      <button class="send" id="go" type="submit">ENVIAR</button>
+    </div>
+  </form>
+</div>
+
 <script>
-// Reemplazar por el link real de confirmación (WhatsApp wa.me, formulario, etc.)
-const RSVP='[LINK / RSVP]';
-const f=document.getElementById('f'),m=document.getElementById('m');
-f.addEventListener('submit',e=>{
-  e.preventDefault();
-  const n=f.n.value.trim();
-  if(!n){m.textContent='Escribí tu nombre para continuar.';f.n.focus();return}
-  if(!/^https?:/.test(RSVP)){m.textContent='Falta completar el link de confirmación ([LINK / RSVP]).';return}
-  const r=f.querySelector('input[name=r]:checked').value;
-  const txt=encodeURIComponent('Hola, soy '+n+'. '+r+' al Campamento Facu 2000.');
-  window.open(RSVP.includes('wa.me')?RSVP+(RSVP.includes('?')?'&':'?')+'text='+txt:RSVP,'_blank','noopener');
-  m.textContent='Listo, '+n+'. Te esperamos.';
+/* ===== CONFIGURACIÓN ===== */
+const APPS_SCRIPT_URL = '';            // pegá acá la URL de la implementación (termina en /exec)
+const FOTO_PRINCIPAL  = 'img/principal.jpg';           
+const FOTO_MONOPOLY   = 'img/monopoly.jpg';           
+const FOTOCOPIA       = false;          // true = blanco y negro con trama; false = foto a color
+const LIMITE = new Date('2026-12-02T03:00:00Z'); // 1/12 23:59 hora Argentina
+/* ========================= */
+
+const F=['Anton','Abril Fatface','Special Elite','Alfa Slab One','Bangers','Permanent Marker','Playfair Display'];
+const C=[['#ff4fa3','#111'],['#d6007f','#fff'],['#e10600','#fff'],['#ffe600','#111'],['#a6ff00','#111'],['#111','#ffe600'],['#8a4bff','#ffe600'],['#62c9ff','#111'],['#f1e9d6','#d6007f']];
+let s=7;const R=()=>(s=(s*16807)%2147483647)/2147483647,J=()=>Math.round(R()*9);
+function ransom(el){const tile=el.classList.contains('tile');let i=0;el.setAttribute('aria-label',el.dataset.r);
+ el.dataset.r.split(' ').forEach(word=>{const w=document.createElement('span');w.className='w';w.setAttribute('aria-hidden','true');
+  [...word].forEach(ch=>{const l=document.createElement('span');l.className='l';l.textContent=ch;
+   const c=C[Math.floor(R()*C.length)],fam=F[Math.floor(R()*F.length)];
+   let st=`font-family:'${fam}',Impact,serif;font-size:${(.85+R()*.5).toFixed(2)}em;rotate:${(R()*14-7).toFixed(1)}deg;translate:0 ${(R()*8-4).toFixed(1)}px;--i:${i++};`;
+   st+=tile?`background:${c[0]};color:${c[1]};clip-path:polygon(${J()}% ${J()}%,${100-J()}% ${J()}%,${100-J()}% ${100-J()}%,${J()}% ${100-J()}%)`:`color:${c[0]==='#f1e9d6'?'#ff4fa3':c[0]}`;
+   l.style.cssText=st;w.appendChild(l)});el.appendChild(w)})}
+document.querySelectorAll('[data-r]').forEach(ransom);
+
+function foto(id,src,label){const e=document.getElementById(id);
+ if(!FOTOCOPIA)e.classList.remove('fx');
+ if(src)e.style.backgroundImage=`url("${src}")`;else{e.classList.remove('fx');e.classList.add('ph');e.dataset.l=label}}
+foto('foto1',FOTO_PRINCIPAL,'TU FOTO ACÁ (portada)');
+foto('foto2',FOTO_MONOPOLY,'FOTO DE FONDO PARA EL MONOPOLY');
+
+let ac,on=false;const au=()=>ac||(ac=new(window.AudioContext||window.webkitAudioContext)());
+function rip(){if(!on)return;const c=au(),n=c.createBufferSource(),b=c.createBuffer(1,c.sampleRate*.25,c.sampleRate),d=b.getChannelData(0);
+ for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*(1-i/d.length);n.buffer=b;const f=c.createBiquadFilter();f.type='highpass';f.frequency.value=1800;
+ const g=c.createGain();g.gain.value=.25;n.connect(f).connect(g).connect(c.destination);n.start()}
+function chime(){if(!on)return;const c=au();[880,1175,1568].forEach((fr,i)=>{const t=c.currentTime+i*.09,o=c.createOscillator(),g=c.createGain();
+ o.type='triangle';o.frequency.value=fr;g.gain.setValueAtTime(.001,t);g.gain.exponentialRampToValueAtTime(.2,t+.02);g.gain.exponentialRampToValueAtTime(.001,t+.5);
+ o.connect(g).connect(c.destination);o.start(t);o.stop(t+.6)})}
+const snd=document.getElementById('snd');
+snd.onclick=()=>{on=!on;snd.textContent='SONIDO: '+(on?'ON':'OFF');snd.setAttribute('aria-pressed',on);if(on){au().resume();chime()}};
+
+const $=id=>document.getElementById(id),ov=$('ov'),f=$('f'),msg=$('msg'),open_=$('open');
+const closed=new Date()>LIMITE;
+if(closed){open_.disabled=true;open_.textContent='CERRADO';}
+function openF(){ov.hidden=false;document.body.style.overflow='hidden';rip();$('nombre').focus()}
+function closeF(){ov.hidden=true;document.body.style.overflow='';open_.focus()}
+open_.onclick=openF;$('close').onclick=closeF;
+ov.addEventListener('click',e=>{if(e.target===ov)closeF()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!ov.hidden)closeF()});
+
+let q=1;const setQ=n=>{q=Math.min(10,Math.max(1,n));$('qv').textContent=q;$('cant').value=q};
+$('mn').onclick=()=>setQ(q-1);$('pl').onclick=()=>setQ(q+1);
+f.addEventListener('change',()=>{$('qwrap').style.display=f.asiste.value==='no'?'none':''});
+
+f.addEventListener('submit',async e=>{e.preventDefault();const go=$('go');
+ if(!$('nombre').value.trim()||!f.asiste.value){msg.textContent='Completá tu nombre y si venís, reina.';return}
+ if(!APPS_SCRIPT_URL){msg.textContent='Falta configurar APPS_SCRIPT_URL en el index.html.';return}
+ go.disabled=true;msg.textContent='Mandando…';
+ try{
+  const r=await fetch(APPS_SCRIPT_URL,{method:'POST',body:new URLSearchParams(new FormData(f))});
+  const d=await r.json();
+  if(!d.ok)throw new Error(d.error==='cerrado'?'Las confirmaciones ya cerraron.':'No se pudo guardar. Probá de nuevo.');
+  const si=f.asiste.value==='si';chime();rip();
+  $('body').innerHTML=`<div class="ok"><div class="stamp">${si?'CONFIRMADA':'ANOTADO'}</div><p>${si?'Te esperamos, reina. Preparate para el Transatlántico.':'Qué lástima, mi amor. Quedó anotado.'}</p><button type="button" class="send" id="bye">LISTO</button></div>`;
+  $('bye').onclick=closeF;
+ }catch(err){msg.textContent=err instanceof TypeError?'No hay conexión con el servidor. Probá de nuevo.':err.message;go.disabled=false}
 });
-const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.4});
-document.querySelectorAll('.stamp').forEach(s=>io.observe(s));
 </script>
-</body>
-</html>
+</body></html>
